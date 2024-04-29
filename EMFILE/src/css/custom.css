@@ -1,0 +1,1490 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+    --ifm-color-primary: #25c2a0;
+    --ifm-color-primary-dark: rgb(33, 175, 144);
+    --ifm-color-primary-darker: rgb(31, 165, 136);
+    --ifm-color-primary-darkest: rgb(26, 136, 112);
+    --ifm-color-primary-light: rgb(70, 203, 174);
+    --ifm-color-primary-lighter: rgb(102, 212, 189);
+    --ifm-color-primary-lightest: rgb(146, 224, 208);
+    --ifm-background-surface-color: var(--ifm-color-content);
+    --ifm-code-font-size: 95%;
+    --ifm-menu-color-active: #81ab44;
+    --ifm-navbar-link-hover-color: #81ab44;
+    --ifm-link-color: #81ab44;
+    --ifm-tabs-color-active: #81ab44;
+    --ifm-color-primary: #81ab44;
+    --ifm-container-width: 100%;
+    --ifm-font-size-base: 90%;
+    --ifm-menu-link-sublist-icon: url("/img/icons/pfeil.svg");
+}
+
+.navbar__brand {
+    height: 3rem;
+}
+
+article {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    max-width: var(--ifm-container-width);
+    padding: 0 var(--ifm-spacing-horizontal); /* overriden to 0 for mobile */
+    padding: 0;
+    width: 100%;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+div {
+    color: #666;
+}
+
+h1 {
+    color: #666;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+.hiddenSidebarEntry {
+    display: none !important;
+}
+
+.docusaurus-highlight-code-line {
+    background-color: rgb(72, 77, 91);
+    display: block;
+    margin: 0 calc(-1 * var(--ifm-pre-padding));
+    padding: 0 var(--ifm-pre-padding);
+}
+
+/* with docusaurus styles the searchbar text is aligned to the top*/
+.MuiTablePagination-selectLabel, .MuiTablePagination-displayedRows {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#svgZoom {
+    transform-origin: 0% 0%;
+}
+
+.katex { font-size: 1em !important; }
+
+div.overviewsummary {
+    background-color: rgb(129, 171, 68);
+    color: white;
+    padding: 15px;
+    width: 50%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+div.functionaldoc table {
+    max-height: 500px;
+}
+
+div.functionaldoc thead {
+    position: sticky;
+    inset-block-start: 0;
+    background-color: white;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+}
+
+.functionalDocComment {
+    background-color: var(--ifm-code-background);
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--ifm-code-border-radius);
+    font-family: var(--ifm-font-family-monospace);
+    font-size: var(--ifm-code-font-size);
+    padding: var(--ifm-code-padding-vertical) var(--ifm-code-padding-horizontal);
+    width: fit-content;
+    margin-bottom: 2px;
+}
+
+/* avoid additional line break if first line is empty. needed to render markdown like \{ which break without an empty line */
+.functionalDocComment p {
+    margin: 0 0 0 0;
+}
+
+.chartJSPie {
+    height: 400px;
+    padding: 20px;
+    display: inline-block;
+    width: 50%;
+}
+
+.chartJSBar {
+    height: 600px;
+    padding: 20px;
+    display: inline-block;
+    width: 90%;
+}
+
+.cell-VERY_GOOD {
+    background-color: rgba(0, 255, 0, 0.3);
+}
+
+.cell-GOOD {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.cell-NEUTRAL {
+    background-color: rgba(255, 255, 0, 0.3);
+}
+
+.cell-BAD {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.cell-VERY_BAD {
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+.MuiTableCell-root { /* set behind search dropdown */
+    z-index: 2 !important;
+}
+
+/* https://github.com/gregnb/mui-datatables/issues/1930
+Column lable are randomly upper case due to the use of the MUI button (when sorting is enabled) */
+th.MuiTableCell-root.MuiTableCell-head button {
+    text-transform: none;
+}
+
+.ds-dataset-1 {
+    y-overflow: scroll;
+    max-height: 75vh;
+}
+
+.theme-doc-sidebar-container {
+    background-color: #202B37;
+}
+
+.navbar {
+    background-color: #202B37;
+}
+
+/* Override non-category links to be horizontally compact */
+li > a.menu__link {
+    justify-content: flex-start;
+}
+
+
+.menu__link {
+    font-weight: 200;
+    color: #eee !important;
+    line-height: 1.7;
+    text-decoration: var(--ifm-link-decoration);
+    white-space: nowrap;
+}
+
+.navbar {
+    height: 6.5rem !important;
+}
+.navbar__logo {
+    height: 5rem;
+    margin-left: 2rem;
+}
+.home {
+    display: grid;
+    grid-template-columns: 1092px 300px;
+
+}
+.contact {
+    background: #222b37;
+    height: 70%;
+    margin-left: 50px;
+    color: #eee;
+}
+
+body {
+    background: #e9e9e9;
+}
+
+:root {
+    --docusaurus-collapse-button-bg: transparent;
+    --docusaurus-collapse-button-bg-hover: rgb(0 0 0 / 10%);
+    --ifm-color-primary: #25c2a0;
+    --ifm-color-primary-dark: rgb(33, 175, 144);
+    --ifm-color-primary-darker: rgb(31, 165, 136);
+    --ifm-color-primary-darkest: rgb(26, 136, 112);
+    --ifm-color-primary-light: rgb(70, 203, 174);
+    --ifm-color-primary-lighter: rgb(102, 212, 189);
+    --ifm-color-primary-lightest: rgb(146, 224, 208);
+    --ifm-code-font-size: 95%;
+    --ifm-menu-color-active: #81ab44;
+    --ifm-navbar-background-color: #202B37;;
+    --ifm-navbar-link-hover-color: #81ab44;
+    --ifm-link-color: #81ab44;
+    --ifm-tabs-color-active: #81ab44;
+    --ifm-color-primary: #81ab44;
+    --ifm-container-width: 100%;
+    --ifm-font-size-base: 90%;
+    --ifm-hover-overlay: rgb(100 100 100 / 40%);
+}
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+}
+
+.contact-button {
+    border-radius: 12px;
+    width: 45%;
+    height: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.custom-span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.collapseSidebarButton_node_modules-\@docusaurus-theme-classic-lib-theme-DocSidebar-Desktop-CollapseButton-styles-module {
+    border: 0px !important;
+}
+
+[class*='collapseSidebarButton'] {
+    border: 0px !important;
+}
+
+.nav-sidebar {
+    background-color: #202B37;
+}
+
+.clean-btn navbar-sidebar__back {
+    background-color: #202B37;
+}
+
+.col {
+    padding: 20px;
+    background: white;
+    margin-top: 0.2rem;
+}
+
+.col:has(#sysdashboard) {
+    background-color: hsl(0, 0%, 91%);
+    padding: 14px;
+    padding-top: 20px;
+    /* padding-left: 28px; */
+}
+
+.col.footer__col {
+    background: transparent;
+}
+
+.card {
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-bottom: 10px;
+}
+.card-header {
+    border-bottom: #009DE0 !important;
+    border-bottom-style: solid !important;
+    background: white !important;
+    padding: 0px !important;
+    padding-left: 5px !important;
+}
+
+.card-body.pb-1 .col-sm-3 {
+    flex: 0 0 auto;
+    width: auto !important;
+}
+
+.card-body.pb-1 label {
+    width: 20rem;
+}
+.card-body {
+    background: rgb(42, 173, 229, 0.01);
+}
+
+div.uiScribbleDocument {
+    font-size: 12px;
+    font-family: Tahoma, sans-serif;
+}
+
+#sysdashboard {
+    display: flex;
+    justify-content: center;
+}
+
+.packages {
+    align-items: center;
+    grid-area: packages;
+    display: grid;
+    grid-template-areas:
+      "packagestitle_area"
+      "packagesdesc_area"
+      "packages_treemap_area";
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content max-content;
+    position: relative;
+    row-gap: 0;
+}
+
+.wrapper {
+    grid-gap: 0 min(500px * 0.01, 1vw);
+    background-color: hsl(0, 0%, 91%);
+    color: #666;
+    position: relative;
+    display: grid;
+    grid-template-areas:
+      "header_area header_area header_area"
+      "dashboardsummarymain dashboardsummaryminor dashboardsummaryminor"
+      "dashboardsummarymain dashboardsummaryminor dashboardsummaryminor"
+      "dashboardsummarymain dashboardsummaryminor dashboardsummaryminor"
+
+
+
+      "ui ui ui"
+      "db db db"
+      "sysacc sysacc sysacc"
+      "packages packages packages"
+      "zykl_komp_area zykl_komp_area zykl_komp_area"
+      "wartbarkeit_area wartbarkeit_area wartbarkeit_area"
+      "aufwandarea aufwandarea aufwandarea";
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: repeat(10, max-content);
+    height: max-content;
+    max-width: 500px;
+
+}
+
+.dashboardbox {
+    background-color: white;
+    border-radius: 4px;
+    color: #666;
+    margin-bottom: 10px;
+    padding: min(500px * 0.03, 3vw);
+    box-sizing: border-box;
+}
+
+#syskontextpage .dashboardbox {
+    background-color: #dddddd;
+}
+
+#sysdashboard h1 {
+    font-size: min(500px * 0.08, 8vw);
+    font-weight: 450;
+    margin-bottom: min(500px * 0.03, 3vw);
+}
+
+.white {
+    color: white;
+}
+
+#sysdashboard p {
+    font-size: min(500px * 0.03, 3vw);
+    margin: 0;
+}
+
+#sysdashboard pl {
+    font-size: min(500px * 0.025, 2.5vw);
+    line-height: normal;
+}
+
+#sysdashboard psmall {
+    font-size: min(500px * 0.02, 2vw);
+}
+
+#sysdashboard a {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+
+.clickable {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#sysdashboard .header {
+    grid-area: header_area;
+    margin-bottom: min(500px * 0.02, 2vw);
+}
+
+.summarymain {
+    grid-area: dashboardsummarymain;
+    background-color: #81ab44;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+
+.summaryminor {
+    display: grid;
+    grid-area: dashboardsummaryminor;
+    grid-template-areas: "minor1 minor4"
+      "minor2 minor5"
+      "minor3 minor6";
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+}
+
+.summaryminor1,.summaryminor2,.summaryminor3,.summaryminor4,.summaryminor5,.summaryminor6 {
+    align-items: center;
+    display: flex;
+    padding: 1vh;
+}
+
+.summaryminor1 {
+    grid-area: minor1;
+    line-height: 100%;
+    width: 100%;
+}
+
+.summaryminor2 {
+    grid-area: minor2;
+}
+
+.summaryminor3 {
+    grid-area: minor3;
+}
+
+.summaryminor4 {
+    grid-area: minor4;
+}
+
+.summaryminor5 {
+    grid-area: minor5;
+}
+
+.summaryminor6 {
+    grid-area: minor6;
+}
+
+.title {
+    box-sizing: border-box;
+    text-align: center;
+    grid-area: title_pie_area;
+}
+
+#sysdashboard .content {
+    left: 50%;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.aufwandtitle {
+    grid-area: aufwandtitle_area;
+}
+
+.aufwanddesc1 {
+    grid-area: aufwanddesc1_area;
+    margin-bottom: 1vw;
+}
+
+.aufwand {
+    display: grid;
+    grid-area: aufwandarea;
+    grid-template-areas:
+      "aufwandtitle_area aufwandtitle_area"
+      "aufwanddesc1_area aufwanddesc1_area"
+      "aufwand_treemap_area aufwand_treemap_area";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content max-content min-content;
+    position: relative;
+    row-gap: min(500px * 0.02, 2vw);
+}
+
+#aufwand_treemap {
+    grid-area: aufwand_treemap_area;
+}
+
+.aufwanddiagram {
+    grid-area: aufwanddiagram_area;
+    height: 100%;
+}
+
+.chartJSBarChart {
+    background-color: transparent;
+    height: 100%;
+}
+
+/* @import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'); */
+
+.circle {
+    aspect-ratio: 1;
+    background: rgb(32, 43, 55);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    left: 50%;
+    margin-bottom: min(500px * 0.02, 2vw);
+    position: relative;
+    text-align: center;
+    transform: translate(-50%);
+    width: 90%;
+    z-index: 1;
+}
+
+.circle_content {
+    position: absolute;
+    align-items: center;
+    display: grid;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+
+.f_point_circle {
+    grid-area: circle2;
+    background: #81ab44;
+    /* margin-bottom: 2vw; */
+}
+
+.p_tage_circle {
+    grid-area: circle1;
+    color: #fff;
+    /* margin-bottom: 2vw; */
+}
+
+.ui_circle {
+    height: 58%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: auto;
+}
+
+.db_circle {
+    height: 58%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: auto;
+}
+
+#sysdashboard .db_circle h1 {
+    margin-bottom: 0.2vh;
+}
+
+.sysacc_circle {
+    height: 58%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+}
+
+#sysdashboard .sysacc_circle h1 {
+    margin-bottom: 0.2vh;
+}
+
+.zyklo_komp {
+    grid-row-gap: 2vw;
+    display: grid;
+    grid-area: zykl_komp_area;
+    grid-template-areas:
+      "zyklo_komp_title_area"
+      "zyklo_komp_pie_area"
+      "zyklo_komp_desc_area";
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto max-content max-content;
+}
+
+.zyklo_komp_title {
+    grid-area: zyklo_komp_title_area;
+}
+
+.zyklo_komp .pie {
+    align-items: center;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr);
+    justify-content: center;
+    width: min(400px, 70%);
+}
+
+.zyklo_komp_pie {
+    grid-area: zyklo_komp_pie_area;
+    position: relative;
+    left: 10%;
+    width: 80%;
+}
+
+canvas {
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+    /* transform: translate(-50%, 0%); */
+    /* left: 50%; */
+}
+
+.desc {
+    align-items: start;
+    column-gap: min(500px * 0.02, 2vw);
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto;
+}
+
+.zyklo_komp_desc {
+    grid-area: zyklo_komp_desc_area;
+    grid-template-columns: max-content auto;
+    grid-template-areas: "zyklo_komp_legend_area zyklo_komp_text_area";
+    align-content: center;
+}
+
+.dashboardbox .horizontal_legend {
+    display: grid;
+    padding: 0;
+}
+
+.dashboardbox .zyklo_komp_legend {
+    grid-area: zyklo_komp_legend_area;
+    list-style: none;
+    margin: 0;
+}
+
+.dashboardbox .zyklo_komp_text {
+    grid-area: zyklo_komp_text_area;
+    padding: 0;
+}
+
+/* basic positioning */
+.dashboardbox .legend {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0;
+    grid-area: legend_pie_area;
+}
+
+.dashboardbox .legend li {
+    margin-right: 1vw !important;
+    overflow-wrap: anywhere;
+}
+
+.dashboardbox li {
+    align-items: center; /* Align vertical */
+    display: flex;
+    float: left;
+    margin: 0 !important;
+    margin-bottom: min(500px * 0.01, 1vw) !important;
+}
+
+.dashboardbox span {
+    border-radius: 4px;
+    float: left;
+    height: min(500px * 0.03, 3vw);
+    margin: 2px;
+    margin-right: 0.75vw;
+    width: min(500px * 0.03, 3vw);
+}
+
+.dashboardbox .superhigh { background-color: #A10D0D; }
+.dashboardbox .high { background-color: #D44441; }
+.dashboardbox .kindahigh { background-color: #F3C614; }
+.dashboardbox .nothigh { background-color: #81ab44; }
+
+.dashboardbox .supergreen { background-color: hsl(84, 43%, 47%); }
+.dashboardbox .green { background-color: hsl(84, 43%, 62%); }
+.dashboardbox .kindagreen { background-color: hsl(84, 43%, 77%); }
+.dashboardbox .slightlygreen { background-color: hsl(84, 43%, 85%); }
+.dashboardbox .notgreen { background-color: hsl(84, 43%, 92%); }
+
+.dashboardbox .superred { background-color: hsl(13, 88%, 40%); }
+.dashboardbox .red { background-color: hsl(13, 88%, 55%); }
+.dashboardbox .kindared { background-color: hsl(13, 88%, 65%); }
+.dashboardbox .notred { background-color: hsl(13, 88%, 75%); }
+.dashboardbox .lightred { background-color: hsl(13, 88%, 85%); }
+
+.chartJSPieChart {
+    margin-bottom: 0;
+    box-sizing: inherit;
+    /* margin-bottom: 10px; */
+    /* padding-left: 10px;
+      padding-right: 10px; */
+}
+
+.wartbarkeit {
+    grid-row-gap: 2vw;
+    display: grid;
+    grid-area: wartbarkeit_area;
+    grid-template-areas:
+      "wartbarkeit_title_area"
+      "wartbarkeit_pie_area"
+      "wartbarkeit_desc_area";
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto max-content max-content;
+}
+
+.wartbarkeit_title {
+    grid-area: wartbarkeit_title_area;
+}
+
+.wartbarkeit_pie {
+    grid-area: wartbarkeit_pie_area;
+    left: 10%;
+    position: relative;
+    width: 80%;
+}
+
+.wartbarkeit_desc {
+    grid-area: wartbarkeit_desc_area;
+    grid-template-areas:
+        "wartbarkeit_legend_area wartbarkeit_text_area";
+    align-content: center;
+}
+
+.wartbarkeit_legend {
+    grid-area: wartbarkeit_legend_area;
+    list-style: none;
+    display: block;
+}
+
+.wartbarkeit_text {
+    grid-area: wartbarkeit_text_area;
+    padding: 0;
+}
+
+.ui {
+    grid-area: ui;
+}
+
+.hollow_pie {
+    grid-area: zyklo_komp_pie;
+    justify-content: center;
+    left: 10%;
+    margin-bottom: min(500px * 0.05, 5vw);
+    position: relative;
+
+    width: 80%;
+}
+
+.hollow_ui {
+    grid-area: ui;
+    z-index: 10;
+
+
+
+
+}
+
+.hollow_db {
+    grid-area: db;
+    z-index: 10;
+    /* position: relative; */
+}
+
+.hollow_sysacc {
+    grid-area: sysacc;
+    z-index: 10;
+
+
+
+}
+
+.hollow_db .title {
+    margin-bottom: min(500px * 0.05, 5vw);
+}
+
+.hollow_sysacc .title {
+    margin-bottom: min(500px * 0.05, 5vw);
+}
+
+.dynproContainer {
+    display: flex;
+    justify-content: flex-start;
+    width: max-content;
+    height: max-content;
+    background-color: #EDF6FA;
+    margin-left: 5vw;
+}
+
+.dynproGrid {
+    display: grid;
+    height: calc(27 * 21px);
+    width: calc(120 * 8px);
+    grid-template-columns: repeat(120, 0.8333%);
+    grid-template-rows: repeat(27, 3.7%);
+    scale: 1;
+    background-color: #EDF6FA;
+}
+
+.dynproItem {
+    display: flex;
+    align-items: center;
+}
+
+.dynproItem * {
+    overflow: hidden;
+    font-size: 11px;
+    white-space: nowrap;
+    margin: 0;
+    border-color: #CCCCCC;
+    color: black;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.dynproItem input[type=checkbox] {
+    overflow: visible;
+}
+
+.dynproItem .dynproLabel {
+    overflow: visible;
+}
+
+.dynproItem input[type=text] {
+    width: 100%;
+    border-width: 1px;
+}
+
+.dynproTable {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+    max-width: none;
+    max-height: none;
+    border: none;
+}
+
+.dynproTable .dynproItem * {
+    z-index: 1;
+    background-color: transparent !important;
+    border: none;
+}
+
+.dynproTable .dynproItem p,input {
+    padding-left: 3px;
+}
+
+.dynproTableContainer {
+    overflow: scroll;
+    border: 1px solid #CCCCCC;
+}
+
+.dynproTableColumn {
+    z-index: 1;
+    border-right: 1px solid #D0D0D0;
+}
+
+.dynproTableLine {
+    z-index: 0;
+    border-bottom: 1px solid #CCCCCC;
+    background-color: #EAEDF0;
+}
+
+.dynproFirstTableLine {
+    background-color: #E5E5E5;
+}
+
+.dynproOutputOnly input[type=text] {
+    background-color: rgb(239, 239, 239);
+}
+
+.dynproItem .dynproButton {
+    width: 100%;
+    border: 1px solid #CCCCCC;
+    text-align: center;
+    cursor: pointer;
+    background-color: #F7F7F7;
+}
+
+.dynproItem .dynproButton:hover {
+    background-color: #EAEAEA;
+}
+
+.dynproItem .dynproButton:active {
+    background-color: #00BCF2;
+    border-color: white;
+}
+
+.dynproItem fieldset {
+    border: #CCCCCC 1px solid;
+    width: 100%;
+    height: 100%;
+    background-color: #f8fdff;
+    /*overflow:scroll*/
+}
+
+.dynproItem textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+}
+
+.dynproItem fieldset legend {
+    padding-left: 5px;
+    border-bottom: 2px solid #73C8EE;
+    margin: 0 2px 0 2px;
+    width: calc(100% - 4px);
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.dynproLabel {
+    margin: 0px 0px -2px 0px;
+}
+
+.dynproCheckboxParent {
+    justify-content: space-between;
+    display: flex;
+}
+
+.dynproHeadline {
+    padding: 3vh 0 1vh 3vw;
+}
+
+.tabSubscreen:not(:target) {
+    display: none;
+}
+
+.tabSubscreen:target {
+    display: block;
+}
+
+.dynproIcon {
+    margin-left: auto;
+    margin-right: auto;
+    user-select: none;
+}
+
+.dynproIconText {
+    margin-right: auto;
+}
+
+.DynproHeadlineNoWrap {
+    display: inline;
+    white-space: nowrap;
+}
+
+.DynproCollapsible-checkbox {
+    display: none;
+}
+
+.DynproCollapsible-label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.DynproToggle-icon::before {
+    content: "\25B8";
+    font-size: 24px;
+}
+
+.DynproCollapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.DynproCollapsible-checkbox:checked
++ .DynproCollapsible-label
+.DynproToggle-icon::before {
+    content: "\25BE";
+}
+
+.DynproCollapsible-checkbox:checked
++ .DynproCollapsible-label
++ .DynproCollapsible-content {
+    max-height: 100%;
+}
+
+.docusaurus-mermaid-container svg {
+    min-height: 100vh;
+}
+
+@media (min-width: 997px) {
+
+    .container {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        max-width: var(--ifm-container-width) !important;
+        padding: 0 var(--ifm-spacing-horizontal);
+    }
+
+    .col:has(#sysdashboard) {
+        padding: 0;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-gap: 0 1vw;
+        background-color: hsl(0, 0%, 91%);
+        color: #666;
+        grid-template-areas:
+        "header_area header_area dashboardsummarymain dashboardsummaryminor dashboardsummaryminor dashboardsummaryminor"
+        "header_area header_area dashboardsummarymain dashboardsummaryminor dashboardsummaryminor dashboardsummaryminor"
+        "header_area header_area dashboardsummarymain dashboardsummaryminor dashboardsummaryminor dashboardsummaryminor"
+        "ui ui db db sysacc sysacc"
+        "packages packages packages packages packages packages"
+        "zykl_komp_area zykl_komp_area zykl_komp_area wartbarkeit_area wartbarkeit_area wartbarkeit_area"
+        "aufwandarea aufwandarea aufwandarea aufwandarea aufwandarea aufwandarea";
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, min(90px, min-content)) repeat(4, max-content);
+        padding: 2%;
+        width: 100%;
+        max-width: none;
+    }
+
+    .dashboardbox {
+        border-radius: 8px;
+        margin-bottom: 1vw;
+        padding: 2vw 1vw;
+    }
+
+    .summarymain {
+        font-size: 1.5vw;
+    }
+
+    .summaryminor {
+        column-gap: 1vw;
+        display: grid;
+        grid-area: dashboardsummaryminor;
+        grid-template-areas: "minor1 minor4"
+        "minor2 minor5"
+        "minor3 minor6";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .summaryminor1 {
+        grid-area: minor1;
+        padding: 1vh;
+    }
+
+    .summaryminor2 {
+        grid-area: minor2;
+        padding: 1vh;
+    }
+
+    .summaryminor3 {
+        grid-area: minor3;
+        padding: 1vh;
+    }
+
+    .summaryminor4 {
+        grid-area: minor4;
+        padding: 1vh;
+    }
+
+    .summaryminor5 {
+        grid-area: minor5;
+        padding: 1vh;
+    }
+
+    .summaryminor6 {
+        grid-area: minor6;
+        padding: 1vh;
+    }
+
+    #sysdashboard canvas {
+        position: relative;
+        z-index: 100;
+        /* max-height: 300px; */
+    }
+
+    .packages {
+        align-items: center;
+        grid-area: packages;
+        display: grid;
+        grid-template-areas:
+        "packagestitle_area"
+        "packagesdesc_area"
+        "packages_treemap_area";
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content max-content;
+        position: relative;
+        row-gap: 0;
+    }
+
+    .packagestitle {
+        grid-area: packagestitle_area;
+    }
+
+
+
+
+
+
+    .aufwanddesc2 {
+        grid-area: aufwanddesc2_area;
+        margin-top: 4vw;
+    }
+
+    #packages_treemap {
+        grid-area: packages_treemap_area;
+        height: auto;
+        left: 0%;
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
+    .aufwand {
+        align-items: center;
+        display: grid;
+        grid-area: aufwandarea;
+        grid-template-areas:
+        "aufwandtitle_area aufwandtitle_area aufwandtitle_area"
+        "aufwanddesc1_area aufwanddesc1_area aufwanddesc1_area"
+        "circle2 circle1 aufwanddiagram_area"
+        "aufwanddesc2_area aufwanddesc2_area aufwanddesc2_area"
+        "aufwand_treemap_area aufwand_treemap_area aufwand_treemap_area";
+        grid-template-columns: 1fr 1fr minmax(0, 3fr);
+        grid-template-rows: repeat(5, max-content);
+        position: relative;
+        row-gap: 0;
+    }
+
+    .f_point_circle {
+        margin-bottom: 0vw;
+    }
+
+    .p_tage_circle {
+        margin-bottom: 0vw;
+    }
+
+    #aufwand_treemap {
+        grid-area: aufwand_treemap_area;
+        height: auto;
+        left: 0%;
+        position: relative;
+        top: 0%;
+        width: 100%;
+    }
+
+    .dashboardbox .legend li {
+        float: left;
+        font-size: 1vw;
+        line-height: 1.5vw;
+        margin-bottom: 0;
+        margin-right: 0.2vw !important;
+        margin-top: 0.25rem;
+        height: min-content;
+    }
+
+    .zyklo_komp {
+        grid-row-gap: 1vw;
+        display: grid;
+        grid-area: zykl_komp_area;
+        grid-template-areas:
+        "zyklo_komp_title_area zyklo_komp_title_area"
+        "zyklo_komp_pie_area zyklo_komp_desc_area";
+        grid-template-columns: minmax(0, 1fr) 1fr;
+        grid-template-rows: auto max-content;
+    }
+
+    #sysdashboard .zyklo_komp_title h1 {
+        margin-bottom: 0;
+    }
+
+    .zyklo_komp_title {
+        grid-area: zyklo_komp_title_area;
+    }
+
+    .pie {
+        align-items: center;
+        display: flex; /*also used for db and syskontext */
+        padding: 1vw;
+        width: var(--width) !important;
+    }
+
+    .zyklo_komp_pie {
+        grid-area: zyklo_komp_pie_area;
+    }
+
+    .desc {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content max-content;
+        padding: 0vh;
+        padding-left: 1.5vw;
+    }
+
+    .zyklo_komp_desc {
+        grid-area: zyklo_komp_desc_area;
+        grid-template-areas:
+        "zyklo_komp_legend_area"
+        "zyklo_komp_text_area";
+    }
+
+    .dashboardbox ol {
+        flex-wrap: wrap; /* allow wrapping of items */
+        margin-bottom: 0;
+        padding-bottom: inherit;
+    }
+
+    .dashboardbox .horizontal_legend {
+        margin-bottom: 1vw;
+    }
+
+    .zyklo_komp_legend {
+        display: block;
+        grid-area: zyklo_komp_legend_area;
+        list-style: none;
+    }
+
+    .dashboardbox li {
+        align-items: center; /* Align vertical */
+        display: flex;
+        font-size: 0.8vw;
+        line-height: 1vw;
+        /* margin: 0%;  */
+        margin-bottom: 0.25vw !important;
+        margin-right: 10px;
+    }
+
+    .desc li {
+        margin: 0;
+    }
+
+    .dashboardbox span {
+        border: 1px transparent;
+        border-radius: 4px;
+        float: left;
+        height: 0.8vw;
+        margin-right: 0.2vw;
+        width: 0.8vw;
+    }
+
+    .dashboardbox li pl {
+        align-items: center;
+        display: flex;
+        font-weight: 600;
+        margin-right: 0.2vw;
+    }
+
+    .zyklo_komp_text {
+        grid-area: zyklo_komp_text_area;
+        padding: 0;
+    }
+
+    .wartbarkeit {
+        grid-row-gap: 1vw;
+        display: grid;
+        grid-area: wartbarkeit_area;
+        grid-template-areas:
+        "wartbarkeit_title_area wartbarkeit_title_area"
+        "wartbarkeit_pie_area wartbarkeit_desc_area";
+        grid-template-columns: minmax(0, 1fr) 1fr;
+        grid-template-rows: auto max-content;
+    }
+
+    .wartbarkeit_title {
+        grid-area: wartbarkeit_title_area;
+    }
+
+    .wartbarkeit_pie {
+        grid-area: wartbarkeit_pie_area;
+    }
+
+    .wartbarkeit_desc {
+        grid-area: wartbarkeit_desc_area;
+        grid-template-areas:
+        "wartbarkeit_legend_area"
+        "wartbarkeit_text_area";
+    }
+
+    .wartbarkeit_legend {
+        display: block;
+        grid-area: wartbarkeit_legend_area;
+        list-style: none;
+    }
+
+    .wartbarkeit_text {
+        grid-area: wartbarkeit_text_area;
+        padding: 0;
+    }
+
+    .hollow_ui {
+        display: grid;
+        grid-area: ui;
+        grid-template-rows: auto max-content 70px;
+        grid-template-areas: "title_pie_area" "chart_pie_area" "legend_pie_area";
+        z-index: 10;
+        position: relative;
+    }
+
+    .ui_circle {
+        height: 55%;
+    }
+
+    .db_circle {
+        height: 55%;
+    }
+
+    .sysacc_circle {
+        height: 55%;
+    }
+
+    .hollow_pie {
+        align-items: center;
+        grid-area: zyklo_komp_pie_area;
+        grid-area: chart_pie_area;
+        margin-bottom: 1vw;
+        padding: 1vh 0;
+    }
+
+    .hollow_db {
+        display: grid;
+        grid-area: db;
+        grid-template-rows: auto max-content 70px;
+        grid-template-areas: "title_pie_area" "chart_pie_area" "legend_pie_area";
+        z-index: 10;
+        position: relative;
+    }
+
+    .hollow_db .title {
+        margin-bottom: 0vw;
+    }
+
+    .hollow_sysacc .title {
+        margin-bottom: 0vw;
+    }
+
+    #sysdashboard h1 {
+        font-size: 2.3vw;
+        font-weight: 400;
+        line-break: normal;
+        margin-bottom: 0.8vw;
+        hyphens: manual;
+    }
+
+    #sysdashboard p {
+        font-size: min(1.3vw, 18px);
+        margin-bottom: 0;
+        hyphens: manual;
+    }
+
+    #sysdashboard .header p {
+        margin-bottom: 20px;
+    }
+
+
+    #sysdashboard pl {
+        font-size: min(0.8vw, 15px);
+        line-height: 1.2vw;
+        font-weight: initial;
+        white-space: pre;
+    }
+
+    #sysdashboard pdb {
+        font-size: 0.9vw;
+        line-height: 1.5vw;
+        margin-bottom: 1vw;
+    }
+
+    #sysdashboard .pbig {
+        font-size: 1.2vw;
+    }
+
+    #sysdashboard psmall {
+        font-size: 0.7vw;
+        margin-bottom: 0;
+        line-height: normal;
+    }
+
+    #syskontextpage {
+        display: grid;
+        grid-column-gap: 1vw;
+        grid-row-gap: 1vw;
+        grid-template-areas: "sysacc sysacc_desc";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: max-content;
+    }
+
+    #syskontextpage .hollow_sysacc {
+        grid-area: sysacc;
+        max-width: 400px;
+        position: relative;
+        z-index: 10;
+    }
+
+    #syskontextpage .sysacc_desc {
+        align-items: center;
+        grid-area: sysacc_desc;
+        margin-bottom: 1vw;
+        padding: 1vw;
+    }
+
+    #ui_treemap {
+        height: 500px;
+        left: 0;
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+
+    .complexity_levels_container {
+        display: flex;
+        justify-content: left;
+        width: 100%;
+        margin: auto;
+    }
+
+    .complexity_level {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .cell-Good {
+        background-color: rgba(14, 166, 7, 0.35);
+    }
+
+    .cell-Medium {
+        background-color: rgba(247, 255, 0, 0.35);
+    }
+
+    .cell-High {
+        background-color: rgba(255, 147, 0, 0.35);
+    }
+
+    .cell-Low,
+    .cell-Extreme {
+        background-color: rgba(255, 0, 0, 0.35);
+    }
+}

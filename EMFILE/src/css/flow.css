@@ -1,0 +1,207 @@
+
+
+.subNav {
+    background-color:#f6f8faf1;
+    display: right;
+
+    position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+}
+
+
+.subNav {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: whitesmoke;
+  display: table-cell;
+  vertical-align: middle;
+  height: 40px;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  flex: 0 1 auto;
+}
+
+.MuiAutocomplete-root {  
+  margin-right: 10px;
+  
+}
+
+
+.box {
+  display: flex;
+  flex-flow: column;
+}
+
+.box .row {  
+    border: 0px dotted grey;
+}
+
+
+.box .row.header {
+  flex: 0 1 auto;
+  background-color: #fffffc;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border: 1px solid #ddd;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.box .row.content {
+  display: flex;
+  flex-flow: column;
+  flex: 1 1 auto;
+  overflow-x: auto;
+}
+
+#paper {
+  margin-left: 15px !important;
+  background-color: white;
+  border-right: 1px grey;
+}
+
+.box .row.footer {
+  flex: 0 1 1px;
+  height: 1px !important;
+}
+
+
+.topNav a:link, .topNav a:active, .topNav a:visited, .bottomNav a:link, .bottomNav a:active, .bottomNav a:visited {
+    color:#FFFFFF;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+.topNav a:hover, .bottomNav a:hover {
+    text-decoration:none;
+    color:#bb7a2a;
+    text-transform:uppercase;
+}
+  
+  /* Override mouse cursor shown for text inside button in context menu */
+  .button-text {
+    cursor: pointer;
+    font-size: 100%;
+  }
+
+
+
+  .subNav-left {
+    margin-left: 20px;
+    display: flex;
+    justify-content: left;
+    width: 100%;
+ }
+
+.tb-item {
+  
+}
+
+.tb-item-btn {
+    border: 1px solid #999;
+    border-radius: 4px;
+    color: #999;
+}
+
+
+
+div label
+{
+    vertical-align:middle;
+}
+
+#zoomslider
+{
+    margin-top: 10px;
+    vertical-align:middle;
+}
+
+
+/* Highlight the selected path */
+g.path-selected path { 
+  stroke: #5881f1;  
+  stroke-width: 3;
+  fill:  #5881f1; 
+}
+
+g.path-selected path line { 
+  stroke: #5881f1;  
+  stroke-width: 3;
+  fill:  #5881f1; 
+}
+
+/* Highlight the selected shape in case it consists of a rectangle */
+g.shape-selected rect {
+    stroke-width: 3;
+    stroke: #853ff7;
+}
+
+/* Highlight the selected shape in case it consists of a polygon  */
+g.shape-selected polygon {
+    stroke-width: 3;
+    stroke: #5881f1; 
+
+}
+
+
+/* select {
+
+
+    background-color: white;
+    border: thin solid rgb(35, 35, 94);
+    border-radius: 15px;
+    display: inline-block;
+    font-size: smaller !important;
+    font-family: Arial, Helvetica, sans-serif ! important;
+    line-height: 1.5em;
+    padding: 0.1em 3.5em 0.1em 1em;
+  
+
+    margin-left: 100px;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+
+select.round {
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      radial-gradient(#ddd 70%, transparent 72%);
+    background-position:
+      calc(100% - 15px) calc(1em + 0px),
+      calc(100% - 10px) calc(1em + 0px),
+      calc(100% - .5em) .5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1.5em 1.5em;
+    background-repeat: no-repeat;
+    margin-left: 20px;;
+  }
+  
+  select.round:focus {
+    background-image:
+      linear-gradient(45deg, white 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, white 50%),
+      radial-gradient(gray 70%, transparent 72%);
+    background-position:
+      calc(100% - 10px) 1em,
+      calc(100% - 15px) 1em,
+      calc(100% - .5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1.5em 1.5em;
+    background-repeat: no-repeat;
+    border-color: #81ab44;
+    outline: 0;
+  }
+   */

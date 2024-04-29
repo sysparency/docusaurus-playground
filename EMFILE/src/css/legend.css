@@ -1,0 +1,153 @@
+
+.legend-popup {
+    
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: rgba(0,0,0, 0.5);   
+  }
+  .legend-popup-inner {
+    position: fixed;
+    left: 15%;
+    right: 15%;
+    top: 15%;
+    bottom: 15%;
+    margin:auto;
+    padding: 5px;
+    background-color: white;
+    
+    text-align: left;
+    font-size: smaller;
+    overflow: auto;
+  }
+
+  .legend-btn {
+    background-color: white;
+    border-color: #eee;
+    border-width: 0px;
+    border-radius: 4px;
+    
+}
+
+.legend-btn:hover {
+    
+        color: #81ab44;
+    background-color: white;
+}
+
+.legend-header {
+    display: table-cell;
+    vertical-align: middle;
+    
+    height: 30px;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin-right: 10px;
+}
+
+
+#legendSymTab {
+    min-width: 40em;
+    min-height: 60em;
+    display: flex; 
+    width: 100%; 
+    height: 100%; 
+    flex-direction: column; 
+    overflow: hidden;
+}
+
+#legendSymTab iframe {
+    flex-grow: 1; 
+    border: none; 
+    margin: 0; 
+    padding: 0;
+}
+
+.legendSymbol {
+    background-color: #4D7A97
+}
+
+.legendDesc {
+    background-color: #4D7A97
+}
+
+/* The class for the body of file legend.html */
+.legend {
+    /* background-color: #c0c0ff; */
+    
+    display: inherit;
+}
+
+.legend h1 {
+    font-size: 140%;
+    padding: 1em;
+    margin: 0;
+}
+
+.legend h2 {
+    clear: left; /* Need because the images use align="left" in HTML code */
+    font-size: 110%;
+    padding: 1em 1em 1em 1em;
+    margin: 0;
+}
+
+.legend p {
+    /* clear: left; Need because the images use align="left" in HTML code */
+    padding: 1em;
+    margin: 0;
+    text-align: justify;
+}
+
+.legend img {
+    vertical-align: top;
+    padding: 0em 1em 0em 0em;
+    margin: 0em;
+}
+
+
+
+.legend-symbols {
+    display: table; 
+    border-collapse: collapse;
+    margin-left: 10px;
+}
+
+.legend-symbol-row {
+    display: table-row;
+    border-bottom-color: #ddd;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.legend-symbol-cell {
+    vertical-align: top;    
+    display: table-cell;
+    background-color: #fff;
+    padding-top:15px;
+    padding-bottom:15px;
+    min-width: 90px;
+}
+
+.legend-symbol-cell-header {
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.legend-symbol-cell-description {   
+    text-align: justify;
+    padding-right: 1em;
+}
+
+
+.legend-symbol-cell-description p {   
+    display: block;
+    padding: 0em;
+    margin-top: 1em;
+}
